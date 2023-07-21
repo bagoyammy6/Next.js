@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "check": "ncu && depcheck"
+    "check": "ncu && depcheck",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@types/node": "20.4.0",
@@ -28,6 +29,7 @@
     "dotenv": "^16.3.1",
     "flat": "^5.0.2",
     "fs-extra": "^11.1.1",
+    "next-sitemap": "^4.1.8",
     "spreadsheet-to-json": "^2.0.0"
   }
 }
