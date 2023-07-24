@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "angular.ng-template",
     "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode"
   ]
