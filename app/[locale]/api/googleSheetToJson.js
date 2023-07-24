@@ -1,8 +1,8 @@
-const fs = require("fs-extra"); // 檔案系統模組
-const unflatten = require("flat").unflatten; // 將扁平化的物件轉換為巢狀結構的物件模組
-const { extractSheets } = require("spreadsheet-to-json"); // 從試算表中提取資料的模組
-const path = require("path"); // 路徑模組
-const dotenv = require("dotenv"); // 載入環境變數的模組
+const fs = require('fs-extra'); // 檔案系統模組
+const unflatten = require('flat').unflatten; // 將扁平化的物件轉換為巢狀結構的物件模組
+const { extractSheets } = require('spreadsheet-to-json'); // 從試算表中提取資料的模組
+const path = require('path'); // 路徑模組
+const dotenv = require('dotenv'); // 載入環境變數的模組
 dotenv.config(); // 載入環境變數
 
 // 提取試算表中的資料
@@ -10,12 +10,12 @@ extractSheets(
   {
     spreadsheetKey: process.env.SPREADSHEET_KEY, // 使用環境變數中的試算表金鑰
     credentials: require(process.env.CREDENTIALS), // 使用環境變數中的認證憑證
-    sheetsToExtract: ["common", "index", "about", "contact", "info"], // 指定要提取的試算表工作表
+    sheetsToExtract: ['common', 'index', 'about', 'contact', 'info'], // 指定要提取的試算表工作表
   },
   (err, data) => {
     if (err) throw err;
 
-    const sheets = ["common", "index", "about", "contact", "info"]; // 指定要處理的工作表
+    const sheets = ['common', 'index', 'about', 'contact', 'info']; // 指定要處理的工作表
 
     let result_en = {}; // 儲存英文翻譯結果的物件
     let result_tw = {}; // 儲存繁體中文翻譯結果的物件
@@ -40,15 +40,15 @@ extractSheets(
     });
 
     const fileNames = [
-      { locale: "en", data: result_en }, // 英文翻譯結果的物件
-      { locale: "tw", data: result_tw }, // 繁體中文翻譯結果的物件
-      { locale: "cn", data: result_cn }, // 簡體中文翻譯結果的物件
+      { locale: 'en', data: result_en }, // 英文翻譯結果的物件
+      { locale: 'tw', data: result_tw }, // 繁體中文翻譯結果的物件
+      { locale: 'cn', data: result_cn }, // 簡體中文翻譯結果的物件
     ];
 
     // 對每個語言版本的翻譯結果進行處理
     fileNames.forEach(({ locale, data }) => {
       fs.writeJSONSync(
-        path.resolve(__dirname, "../../../messages", `${locale}.json`), // 寫入的 JSON 檔案路徑
+        path.resolve(__dirname, '../../../messages', `${locale}.json`), // 寫入的 JSON 檔案路徑
         unflatten(data, { object: true }), // 轉換為巢狀結構的物件
         { spaces: 2 } // 指定縮排的空格數
       );

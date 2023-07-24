@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "check": "ncu && depcheck",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "20.4.0",
@@ -29,7 +30,10 @@
     "dotenv": "^16.3.1",
     "flat": "^5.0.2",
     "fs-extra": "^11.1.1",
+    "husky": "^8.0.3",
     "next-sitemap": "^4.1.8",
+    "prettier": "^3.0.0",
+    "pretty-quick": "^3.1.3",
     "spreadsheet-to-json": "^2.0.0"
   }
 }
