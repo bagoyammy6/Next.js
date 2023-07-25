@@ -7,15 +7,15 @@ export default function Home() {
   return (
     <>
       <Link href="/" locale="tw">
-        <button className="p-8 bg-slate-500 text-white border border-white">繁中</button>
+        <button className="border border-white bg-slate-500 p-8 text-white">繁中</button>
       </Link>
       <Link href="/" locale="cn">
-        <button className="p-8 bg-slate-500 text-white border border-white">簡中</button>
+        <button className="border border-white bg-slate-500 p-8 text-white">簡中</button>
       </Link>
       <Link href="/" locale="en">
-        <button className="p-8 bg-slate-500 text-white border border-white">英文</button>
+        <button className="border border-white bg-slate-500 p-8 text-white">英文</button>
       </Link>
-      <div className="font bold text-center mt-[80px]">
+      <div className="font bold mt-[80px] text-center">
         <h1>{t('company')}</h1>
       </div>
     </>
