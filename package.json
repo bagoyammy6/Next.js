@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "next": "13.4.9",
-    "next-intl": "^3.0.0-beta.7",
+    "next-translate": "^2.5.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -43,6 +43,7 @@
     "jest-watch-typeahead": "^2.2.2",
     "lint-staged": "^13.2.3",
     "next-sitemap": "^4.1.8",
+    "next-translate-plugin": "^2.5.2",
     "postcss": "8.4.25",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.4.1",
