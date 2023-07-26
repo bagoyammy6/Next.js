@@ -3,7 +3,7 @@
 .idea
 
 # Package Manager
-package.json
+# package.json
 package-lock.json
 yarn.lock
 
