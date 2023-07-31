@@ -6,4 +6,5 @@ test('英文選項存在頁面上', () => {
 
   const button = screen.getByText('英文');
   expect(button).toBeInTheDocument();
+  expect(button).toHaveClass('text-bol'); // 使用toHaveClass進行測試
 });

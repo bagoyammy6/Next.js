@@ -17,13 +17,15 @@ extractSheets(
     const sheets = ['common', 'index', 'about', 'contact', 'info'];
 
     sheets.forEach((sheet) => {
-      const read: { key: string; tw: string; cn: string; en: string }[] = [...data[sheet]];
+      const read: { key: string; 'zh-TW': string; 'zh-CN': string; 'en-US': string }[] = [
+        ...data[sheet],
+      ];
 
       interface result {
         key: string;
-        tw: string;
-        cn: string;
-        en: string;
+        'zh-TW': string;
+        'zh-CN': string;
+        'en-US': string;
       }
 
       const result_tw = {} as result;
@@ -31,21 +33,21 @@ extractSheets(
       const result_en = {} as result;
 
       interface files {
-        tw: object;
-        cn: object;
-        en: object;
+        'zh-TW': object;
+        'zh-CN': object;
+        'en-US': object;
       }
 
       const files: files = {
-        tw: result_tw,
-        cn: result_cn,
-        en: result_en,
+        'zh-TW': result_tw,
+        'zh-CN': result_cn,
+        'en-US': result_en,
       };
 
       read.forEach((el) => {
-        result_tw[el['key'] as keyof result] = el['tw'] ? el['tw'] : '';
-        result_cn[el['key'] as keyof result] = el['cn'] ? el['cn'] : '';
-        result_en[el['key'] as keyof result] = el['en'] ? el['en'] : '';
+        result_tw[el['key'] as keyof result] = el['zh-TW'] ? el['zh-TW'] : '';
+        result_cn[el['key'] as keyof result] = el['zh-CN'] ? el['zh-CN'] : '';
+        result_en[el['key'] as keyof result] = el['en-US'] ? el['en-US'] : '';
       });
 
       Object.keys(files).forEach((key) => {

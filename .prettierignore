@@ -32,6 +32,6 @@ testem.log
 
 # Next-related
 /node_modules/
-/public/
+# /public/
 /build/
 /.next/
