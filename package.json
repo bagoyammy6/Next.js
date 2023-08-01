@@ -20,6 +20,8 @@
     "component:headless": "cypress run --component"
   },
   "dependencies": {
+    "@next/font": "^13.4.12",
+    "client-only": "^0.0.1",
     "next": "13.4.9",
     "next-translate": "^2.5.2",
     "react": "18.2.0",
@@ -31,6 +33,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "@types/gtag.js": "^0.0.12",
     "@types/node": "20.4.0",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
