@@ -20,7 +20,6 @@
     "component:headless": "cypress run --component"
   },
   "dependencies": {
-    "@next/font": "^13.4.12",
     "client-only": "^0.0.1",
     "next": "13.4.9",
     "next-translate": "^2.5.2",
