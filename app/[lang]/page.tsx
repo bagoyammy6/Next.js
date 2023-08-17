@@ -28,6 +28,12 @@ export default function Home() {
         <br />
         <br />
         {t('index:banner')}
+        <br />
+        <br />
+        <Link href="/zh-TW/about">About</Link>
+        <br />
+        <br />
+        <Link href="/zh-TW/aboutttt">Not Found</Link>
       </div>
     </div>
   );
